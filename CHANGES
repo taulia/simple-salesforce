@@ -75,3 +75,7 @@ Other
 - [85] Added tox support, updated travis-ci config
 - Added CHANGES file
 - [97] _call_salesforce is now used consistently across API
+
+1.0.1
+-----
+- Forked from simple-salesforce main branch to support Python 2.7
