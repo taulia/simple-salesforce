@@ -1,9 +1,9 @@
-.. simple-salesforce documentation master file, created by
+.. simple-salesforce-2-7 documentation master file, created by
    sphinx-quickstart on Tue Nov 22 19:18:40 2016.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to simple-salesforce's documentation!
+Welcome to simple-salesforce-2-7's documentation!
 =============================================
 
 Simple Salesforce is a basic Salesforce.com REST API client built for Python 2.6, 2.7, 3.3, 3.4, 3.5 and 3.6. The goal is to provide a very low-level interface to the REST Resource and APEX API, returning a dictionary of the API JSON response.
@@ -61,4 +61,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
