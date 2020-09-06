@@ -9,7 +9,7 @@ import json
 import logging
 import re
 from collections import OrderedDict, namedtuple
-from urllib.parse import urljoin, urlparse
+from urlparse import urljoin, urlparse
 
 import requests
 
