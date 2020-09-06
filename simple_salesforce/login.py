@@ -9,9 +9,9 @@ DEFAULT_CLIENT_ID_PREFIX = 'RestForce'
 import time
 import warnings
 from datetime import datetime, timedelta
-from json.decoder import JSONDecodeError
 
 import requests
+import simplejson
 from authlib.jose import jwt
 
 from .api import DEFAULT_API_VERSION
@@ -228,7 +228,7 @@ def token_login(token_url, token_data, domain, consumer_key,
 
     try:
         json_response = response.json()
-    except JSONDecodeError:
+    except simplejson.errors.JSONDecodeError:
         raise SalesforceAuthenticationFailed(
             response.status_code, response.text
         )
