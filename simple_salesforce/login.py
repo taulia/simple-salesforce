@@ -9,7 +9,6 @@ DEFAULT_CLIENT_ID_PREFIX = 'RestForce'
 import time
 import warnings
 from datetime import datetime, timedelta
-from html import escape
 from json.decoder import JSONDecodeError
 
 import requests
@@ -77,8 +76,8 @@ def SalesforceLogin(
                                sf_version=sf_version)
 
     # pylint: disable=E0012,deprecated-method
-    username = escape(username) if username else None
-    password = escape(password) if password else None
+    username = username.replace('&', '&amp;').replace('>', '&gt;').replace('<', '&lt;').encode('ascii', 'xmlcharrefreplace') if username else None
+    password = password.replace('&', '&amp;').replace('>', '&gt;').replace('<', '&lt;').encode('ascii', 'xmlcharrefreplace') if password else None
 
     # Check if token authentication is used
     if security_token is not None:
